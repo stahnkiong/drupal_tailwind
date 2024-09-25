@@ -628,9 +628,9 @@ video {
   display: none;
 }
 
-.bg-red-600 {
+.bg-slate-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
 .filter {
