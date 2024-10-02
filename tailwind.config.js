@@ -4,7 +4,11 @@ module.exports = {
     "./templates/**/*.twig"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        body: "'Open Sans', ui-sans-serif",
+      }
+    },
   },
   plugins: [],
 }

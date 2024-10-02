@@ -34,10 +34,19 @@
 #}
 {%
   set classes = [
-    'block',
     'block-menu',
     'navigation',
     'menu--' ~ derivative_plugin_id|clean_class,
+    'hidden',
+    'items-center',
+    'md:w-auto',
+    'w-full',
+    'md:flex ',
+    'md:justify-self-end', 
+    'md:mx-5',
+    'text-default',
+    'hidden',
+    'col-span-2'
   ]
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}

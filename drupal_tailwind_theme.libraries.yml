@@ -1,5 +1,7 @@
 base:
   version: VERSION
+  js:
+    js/main.js: {}
   css:
     component:
       css/components/action-links.css:

@@ -44,11 +44,24 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
+  <header role="banner" class="mx-auto w-full bg-black ease-in-out flex-none sticky top-0 z-40 scroll font-body">
+    <div class="relative mx-auto md:px-6 text-default max-w-7xl md:grid md:grid-cols-3 md:items-center px-3 py-3 w-full text-white">
+      <div class="flex justify-between">
+        {{ page.header }}
+        <div class="flex items-center md:hidden">
+          <button class="flex justify-center items-center cursor-pointer flex-col group h-6 rounded w-12" type="button" aria-label="Toggle Menu" id="toggle-menu">
+            <span class="sr-only">Toggle Menu</span>
+            <span class="transition duration-200 bg-white ease h-0.5 my-0.5 opacity-80 rounded-full transform w-6 group-[.expanded]:rotate-45 group-[.expanded]:translate-y-1.5" aria-hidden="true"></span> 
+            <span class="transition duration-200 bg-white ease h-0.5 my-0.5 opacity-80 rounded-full transform w-6 group-[.expanded]:opacity-0" aria-hidden="true"></span> 
+            <span class="transition duration-200 bg-white ease h-0.5 my-0.5 opacity-80 rounded-full transform w-6 group-[.expanded]:-rotate-45 group-[.expanded]:-translate-y-1.5" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div> 
+      {{ page.primary_menu }}
+    </div>
   </header>
 
-  {{ page.primary_menu }}
+  
   {{ page.secondary_menu }}
 
   {{ page.breadcrumb }}
