@@ -37,48 +37,36 @@
  * @see template_preprocess_field()
  */
 #}
-{# always hide field-labels
-{%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-    label_display == 'inline' ? 'clearfix',
-  ]
-%}
-{%
-  set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
 
- {% if label_hidden %} #}
-  {% if multiple %}
+  {# {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
-    </div>
-  {% else %}
+    </div> #}
+  {# {% else %}
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
-  {% endif %}
-
-{# always hide field-labels
-{% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-      <div class="field__items">
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
+  {% endif %} #}
+{% set carouselWidth = items|length * 8 %}
+{% set mdcarouselWidth = items|length * 11 %}
+<div class="relative overflow-hidden bg-black">
+  <div class="flex items-center gap-4  w-[{{carouselWidth}}rem] md:w-[{{mdcarouselWidth}}rem] animate-slide-left">
+    {% for item in items %} 
+      <div class="carousel-item *:w-28 md:*:w-40 *:max-w-none">
+        {{ item.content }}
       </div>
-    {% endif %}
+    {% endfor %}
+    {% for item in items %}
+      <div class="carousel-item *:w-28 md:*:w-40 *:max-w-none">
+        {{ item.content }}
+      </div>
+    {% endfor %}
+    {% for item in items %}
+      <div class="carousel-item *:w-28 md:*:w-40 *:max-w-none">
+        {{ item.content }}
+      </div>
+    {% endfor %}
   </div>
-{% endif %} #}
+</div>
