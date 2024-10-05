@@ -622,12 +622,12 @@ video {
   top: 0px;
 }
 
-.z-40{
-  z-index: 40;
-}
-
 .-z-10{
   z-index: -10;
+}
+
+.z-40{
+  z-index: 40;
 }
 
 .col-span-2{
