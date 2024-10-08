@@ -38,6 +38,21 @@
  */
 #}
 
+{# slot {% for item in items %}
+<div class="flex items-center justify-center max-h-[80vh] overflow-hidden -z-10 *:w-full *:max-h-full *:object-cover">
+  {{ item.content }}
+</div>
+{% endfor %} #}
+
+{% for item in items %}
+  <div{{ attributes.addClass(classes, 'absolute w-full h-full flex items-center justify-center bg-[#00000066] text-white overflow-hidden') }}>
+    <div>
+      {{ item.content }}
+    </div> 
+  </div>
+{% endfor %}
+
+{# always hide field-labels
 {%
   set classes = [
     'field',
@@ -54,9 +69,9 @@
   ]
 %}
 
-{% if label_hidden %}
-  {% if multiple %}
-    <div {{ attributes.addClass(classes, 'field__items') }}>
+ {% if label_hidden %} #}
+  {# {% if multiple %}
+    <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
       {% endfor %}
@@ -65,8 +80,9 @@
     {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
-  {% endif %}
+  {% endif %} #}
 
+{# always hide field-labels
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
@@ -80,4 +96,4 @@
       </div>
     {% endif %}
   </div>
-{% endif %}
+{% endif %} #}

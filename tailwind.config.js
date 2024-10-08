@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         display: "Roboto, ui-sans-serif",
       },
+      letterSpacing: {
+        wider: '.2em',
+        widest: '.4em',
+      },
       animation: {
         'slide-left': 'slide-left 24s linear infinite', 
       },
