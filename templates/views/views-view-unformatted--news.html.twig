@@ -24,7 +24,7 @@
       default_row_class ? 'views-row',
     ]
   %}
-  <div{{ row.attributes.addClass(row_classes) }}>
+  <div{{ row.attributes.addClass(row_classes, 'md:grid grid-cols-8 grid-rows-6 gap-4 relative overflow-hidden rounded-xl border bg-white transition-transform duration-500 hover:-translate-y-1 hover:scale-105') }}>
     {{- row.content -}}
   </div>
 {% endfor %}

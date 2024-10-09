@@ -72,11 +72,11 @@
   ]
 %}
 {{ attach_library('drupal_tailwind_theme/node') }}
-<article{{ attributes.addClass(classes, 'relative mx-auto px-4 max-w-7xl sm:px-6 first:pt-8 *:pb-4 ') }}>
-  <div{{ content_attributes.addClass('grid grid-cols-2 gap-4') }}>
-    <div class="md:order-1">
+<article{{ attributes.addClass(classes, 'relative mx-auto px-4 max-w-7xl sm:px-6 pt-8 ') }}>
+  <div{{ content_attributes.addClass('') }}>
+    <div class="md:w-1/2 md:float-right py-4">
       {{ title_prefix }}
-        <h4 class="md:order-1">{{ label }}</h4>
+        <h4>{{ label }}</h4>
       {{ title_suffix }}
 
       {% if display_submitted %}
