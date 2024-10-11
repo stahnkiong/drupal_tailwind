@@ -37,7 +37,7 @@
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
     dom_id ? 'js-view-dom-id-' ~ dom_id,
-    'flex flex-col min-h-screen mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'
+    'flex flex-col mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -63,7 +63,7 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content my-12 grid grid-cols-1 gap-8 md:gap-4 md:grid-cols-2 lg:grid-cols-2">
+    <div class="view-content my-4 grid grid-cols-1 gap-8 md:gap-4 md:grid-cols-3 lg:grid-cols-3">
       {{ rows }}
     </div>
   {% elseif empty %}

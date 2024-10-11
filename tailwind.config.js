@@ -5,7 +5,8 @@ module.exports = {
   ],
   safelist: [
     ...[...Array(10).keys()].flatMap(i => [`md:w-[${i*11}rem]`]),
-    ...[...Array(10).keys()].flatMap(i => [`w-[${i*8}rem]`]), 
+    ...[...Array(10).keys()].flatMap(i => [`w-[${i*8}rem]`]),
+    ...[...Array(3).keys()].flatMap(i => [`max-h-[${i*10+60}vh]`]), //60,70,80
   ],
   theme: {
     extend: {
