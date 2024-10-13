@@ -634,6 +634,10 @@ video {
   z-index: 40;
 }
 
+.z-10{
+  z-index: 10;
+}
+
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -696,6 +700,10 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.h-\[80vh\]{
+  height: 80vh;
 }
 
 .max-h-\[60vh\]{
@@ -848,6 +856,22 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\{\{item\.content\}\}\)\]{
+  background-image: url({{item.content}});
+}
+
+.bg-\[url\(\'\{\{item\.content\}\}\'\)\]{
+  background-image: url('{{item.content}}');
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-center{
+  background-position: center;
 }
 
 .px-3{
@@ -1066,6 +1090,7 @@ ul{
 
 #block-views-block-news-block-1{
   margin-top: 3rem;
+  margin-bottom: 3rem;
   .views-row{
     position: relative;
   }
@@ -1135,7 +1160,8 @@ ul{
   max-width: 56rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(5, minmax(0, 1fr));
-  gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
@@ -1173,6 +1199,9 @@ ul{
   }
   .hc2{
     grid-row-start: 2;
+  }
+  .hc2{
+    margin-bottom: 1rem;
   }
   @media (min-width: 768px){
     .hc2{
@@ -1220,6 +1249,9 @@ ul{
     grid-row-start: 2;
   }
   .hc3{
+    margin-bottom: 1rem;
+  }
+  .hc3{
     display: flex;
   }
   .hc3 {
@@ -1228,6 +1260,9 @@ ul{
     }
     > div{
       display: flex;
+    }
+    > div{
+      flex: 1 1 0%;
     }
     > div{
       align-items: center;
@@ -1255,6 +1290,9 @@ ul{
     grid-row-start: 4;
   }
   .hc4{
+    margin-bottom: 1rem;
+  }
+  .hc4{
     display: flex;
   }
   .hc4 {
@@ -1263,6 +1301,9 @@ ul{
     }
     > div{
       display: flex;
+    }
+    > div{
+      flex: 1 1 0%;
     }
     > div{
       align-items: center;

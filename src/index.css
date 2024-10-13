@@ -55,7 +55,7 @@ ul {
 }
 
 #block-views-block-news-block-1 {
-    @apply mt-12;
+    @apply my-12;
     .views-row {
     @apply relative overflow-hidden rounded-xl border bg-white transition-transform duration-500 hover:-translate-y-1 hover:scale-105;
     }
@@ -66,26 +66,26 @@ ul {
 }
 
 #hc-grid {
-    @apply md:grid grid-cols-4 grid-rows-5 gap-8 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center;
+    @apply md:grid grid-cols-4 grid-rows-5 gap-x-8 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center;
     .hc1 {
         @apply col-span-4;
     }
     .hc2 {
-        @apply col-span-2 row-span-4 row-start-2 md:text-right;
+        @apply col-span-2 row-span-4 row-start-2 md:text-right mb-4;
         a {
             @apply rounded-lg border border-white text-white text-sm px-4 py-2 ;
         }
     }
     .hc3 {
-        @apply col-span-2 row-span-2 col-start-3 row-start-2 flex ;
+        @apply col-span-2 row-span-2 col-start-3 row-start-2 flex mb-4;
         > div {
-            @apply fill-current flex items-center gap-4 text-left ml-4;
+            @apply fill-current flex flex-1 items-center gap-4 text-left ml-4;
         }
     }
     .hc4 {
-        @apply col-span-2 row-span-2 col-start-3 row-start-4 flex ;
+        @apply col-span-2 row-span-2 col-start-3 row-start-4 flex mb-4;
         > div {
-            @apply fill-current flex items-center gap-4 text-left ml-4;
+            @apply fill-current flex  flex-1 items-center gap-4 text-left ml-4;
 
         }
     }

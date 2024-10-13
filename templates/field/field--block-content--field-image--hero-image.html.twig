@@ -40,7 +40,9 @@
 
 
 {% for item in items %}
-  <div id="hero-image" {{ attributes.addClass(classes, 'flex items-center justify-center overflow-hidden -z-10 *:max-w-fit md:*:max-w-full md:*:w-full *:max-h-full *:object-cover') }}>{{ item.content }}</div>
+
+  <div style="background-image:url({{ item.content }})" {{ attributes.addClass(classes, 'hero-image -z-10 flex items-center justify-center overflow-hidden -z-10 h-[80vh] bg-cover bg-center') }}></div>
+
 {% endfor %}
 
 {# always hide field-labels

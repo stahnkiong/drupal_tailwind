@@ -15,5 +15,13 @@ toggle.addEventListener("click", function() {
 
 let maxHeight = Array.from(document.getElementsByClassName('field--name-field-max-height'));
 Array.prototype.map.call(maxHeight, mh => {
-    mh.parentNode.querySelector("#hero-image").classList.add('max-h-[' + mh.innerText + 'vh]')
-})
+    mh.parentNode.querySelector(".hero-image").classList.add('max-h-[' + mh.innerText + 'vh]')
+});
+
+window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    let bgImage = Array.from(document.querySelectorAll(".hero-image"));
+    Array.prototype.map.call(bgImage, bg => {
+        bg.style.backgroundPosition = `50% calc(50% + ${scroll*0.2}px)`;
+    });
+});
