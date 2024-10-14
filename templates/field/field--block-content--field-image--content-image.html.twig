@@ -45,24 +45,19 @@
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
     label_display == 'inline' ? 'clearfix',
+    'order-0 col-span-2 row-span-4'
   ]
 %}
 
 {% if multiple %}
   <div {{ attributes.addClass(classes, 'field__items') }}>
     {% for item in items %}
-      {% if item.content.field_title['#bundle'] == 'content_image' %}
-        <div {{ item.attributes.addClass('field__item relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 my-12 md:grid grid-cols-4 grid-rows-4 gap-4') }}>{{ item.content }}</div>
-      {% else %}
-        <div {{ item.attributes.addClass('field__item relative') }}>{{ item.content }}</div>
-      {% endif %}
-
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
     {% endfor %}
   </div>
 {% else %}
   {% for item in items %}
-    <div {{ attributes.addClass(classes, 'field__item relative') }}>{{ item.content }}</div>
+    <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
   {% endfor %}
 {% endif %}
-
 

@@ -4,9 +4,16 @@ module.exports = {
     "./templates/**/*.twig"
   ],
   safelist: [
+    'list-image-checkmark',
+    'list-image-checkright',
+    'bg-black',
+    'bg-neutral-950',
+    'bg-neutral-900',
+    'bg-neutral-800',
+    'bg-neutral-700',
     ...[...Array(10).keys()].flatMap(i => [`md:w-[${i*11}rem]`]),
     ...[...Array(10).keys()].flatMap(i => [`w-[${i*8}rem]`]),
-    ...[...Array(3).keys()].flatMap(i => [`max-h-[${i*10+60}vh]`]), //60,70,80
+    ...[...Array(3).keys()].flatMap(i => [`md:max-h-[${i*10+60}vh]`]), //60,70,80
   ],
   theme: {
     extend: {
@@ -25,6 +32,10 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-100%)' },
         },
+      },
+      listStyleImage: { 
+        checkmark: "url('../images/icons/tick.svg')",
+        checkright: "url('../images/icons/checkright.svg')",
       },
     },
   },

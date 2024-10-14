@@ -15,13 +15,25 @@ toggle.addEventListener("click", function() {
 
 let maxHeight = Array.from(document.getElementsByClassName('field--name-field-max-height'));
 Array.prototype.map.call(maxHeight, mh => {
-    mh.parentNode.querySelector(".hero-image").classList.add('max-h-[' + mh.innerText + 'vh]')
+    mh.parentNode.querySelector(".hero-image").classList.add('md:max-h-[' + mh.innerText + 'vh]')
+});
+
+let bgColor = Array.from(document.getElementsByClassName('field--name-field-background'));
+Array.prototype.map.call(bgColor, bg => {
+        bg.parentNode.classList.add('bg-' + bg.innerText, 'text-white');
+        bg.style.display = 'none';
 });
 
 window.addEventListener("scroll", () => {
     const scroll = window.scrollY;
     let bgImage = Array.from(document.querySelectorAll(".hero-image"));
     Array.prototype.map.call(bgImage, bg => {
-        bg.style.backgroundPosition = `50% calc(50% + ${scroll*0.2}px)`;
+        let top = bg.getBoundingClientRect().top;
+        if (scroll > top) {
+            bg.style.backgroundPosition = `50% calc(50% + ${(scroll-top)*0.2}px)`;
+        }
+        else {
+            bg.style.backgroundPosition = 'center';
+        }
     });
 });

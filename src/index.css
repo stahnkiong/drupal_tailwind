@@ -12,7 +12,7 @@ a:hover {
     @apply text-sky-400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     @apply font-display;
     @apply font-medium;
 }
@@ -30,19 +30,34 @@ h4 {
 }
 
 h5 {
-    @apply text-lg md:text-xl tracking-wide py-1;
+    @apply text-lg md:text-2xl tracking-wider py-1;
 }
 
 h6 {
-    @apply text-sm md:text-lg tracking-wide;
+    @apply text-sm md:text-lg font-thin tracking-wide;
 }
 
 ul {
     @apply list-disc pl-6;
 }
 
+p {
+    @apply mb-4
+}
+
+.button {
+    @apply rounded-md border border-white text-white text-sm px-4 py-2 transition hover:bg-white hover:text-black;
+}
+
+.button-dark {
+    @apply rounded-md border border-black text-black text-sm px-4 py-2 transition hover:bg-black hover:text-white;
+}
 
 /* custom style */
+ul[class^="list-image-"] li::marker {
+    @apply text-2xl;
+}
+
 .views-field-field-image {
     @apply col-span-4 row-span-6;
 }
@@ -66,30 +81,36 @@ ul {
 }
 
 #hc-grid {
-    @apply md:grid grid-cols-4 grid-rows-5 gap-x-8 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center;
+    @apply md:grid grid-cols-4 grid-rows-6 gap-x-8 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center;
     .hc1 {
         @apply col-span-4;
     }
     .hc2 {
-        @apply col-span-2 row-span-4 row-start-2 md:text-right mb-4;
-        a {
-            @apply rounded-lg border border-white text-white text-sm px-4 py-2 ;
-        }
+        @apply col-span-2 row-span-5 row-start-2 md:text-right mb-4;
     }
     .hc3 {
         @apply col-span-2 row-span-2 col-start-3 row-start-2 flex mb-4;
         > div {
-            @apply fill-current flex flex-1 items-center gap-4 text-left ml-4;
+            @apply fill-current flex flex-1 flex-col justify-center items-center gap-4 text-left ml-4;
         }
     }
     .hc4 {
         @apply col-span-2 row-span-2 col-start-3 row-start-4 flex mb-4;
         > div {
-            @apply fill-current flex  flex-1 items-center gap-4 text-left ml-4;
+            @apply fill-current flex flex-1 flex-col justify-center items-center gap-4 text-left ml-4;
 
         }
     }
     svg {
         @apply w-10
     }
+}
+
+.ft-flex {
+    @apply flex min-h-96 items-center;
+}
+
+.ft-grid {
+    @apply md:grid grid-cols-2 gap-8 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-sm;
+
 }
