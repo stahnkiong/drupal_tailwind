@@ -11,6 +11,10 @@ module.exports = {
     'bg-neutral-900',
     'bg-neutral-800',
     'bg-neutral-700',
+    'text-neutral-300',
+    'max-w-7xl',
+    'max-w-6xl',
+    'max-w-5xl',
     ...[...Array(10).keys()].flatMap(i => [`md:w-[${i*11}rem]`]),
     ...[...Array(10).keys()].flatMap(i => [`w-[${i*8}rem]`]),
     ...[...Array(3).keys()].flatMap(i => [`md:max-h-[${i*10+60}vh]`]), //60,70,80

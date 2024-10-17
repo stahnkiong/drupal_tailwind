@@ -18,9 +18,14 @@ Array.prototype.map.call(maxHeight, mh => {
     mh.parentNode.querySelector(".hero-image").classList.add('md:max-h-[' + mh.innerText + 'vh]')
 });
 
+let maxWidth = Array.from(document.getElementsByClassName('field--name-field-max-width'));
+Array.prototype.map.call(maxWidth, mw => {
+    mw.parentNode.classList.add('max-w-' + mw.innerText, 'mx-auto');
+});
+
 let bgColor = Array.from(document.getElementsByClassName('field--name-field-background'));
 Array.prototype.map.call(bgColor, bg => {
-        bg.parentNode.classList.add('bg-' + bg.innerText, 'text-white');
+        bg.parentNode.classList.add('bg-' + bg.innerText, 'text-neutral-300');
         bg.style.display = 'none';
 });
 

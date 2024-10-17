@@ -45,19 +45,19 @@
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
     label_display == 'inline' ? 'clearfix',
-    'order-1 col-span-2 col-start-3 self-end'
+    'order-1 col-span-2 col-start-3 self-end px-4 md:px-8'
   ]
 %}
 
 {% if multiple %}
   <div {{ attributes.addClass(classes, 'field__items') }}>
     {% for item in items %}
-      <h4{{ item.attributes.addClass('field__item') }}>{{ item.content }}</h4>
+      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
     {% endfor %}
   </div>
 {% else %}
   {% for item in items %}
-    <h4{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</h4>
+    <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
   {% endfor %}
 {% endif %}
 
