@@ -15,6 +15,8 @@ module.exports = {
     'max-w-7xl',
     'max-w-6xl',
     'max-w-5xl',
+    'md:grid-cols-2',
+    ' gap-8',
     ...[...Array(10).keys()].flatMap(i => [`md:w-[${i*11}rem]`]),
     ...[...Array(10).keys()].flatMap(i => [`w-[${i*8}rem]`]),
     ...[...Array(3).keys()].flatMap(i => [`md:max-h-[${i*10+60}vh]`]), //60,70,80
@@ -24,7 +26,11 @@ module.exports = {
       fontFamily: {
         display: "Roboto, ui-sans-serif",
       },
+      fontSize: {
+        sm: ['15px', '20px']
+      },
       letterSpacing: {
+        wide: '.1em',
         wider: '.2em',
         widest: '.4em',
       },
