@@ -84,7 +84,7 @@ ul[class^="list-image-"] li::marker {
 }
 
 #hc-grid {
-    @apply md:grid grid-cols-4 grid-rows-6 gap-x-8 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center;
+    @apply md:grid grid-cols-4 grid-rows-6 gap-x-8 mx-auto py-20 max-w-4xl px-4 sm:px-6 lg:px-8 text-center;
     .hc1 {
         @apply col-span-4;
     }
@@ -94,13 +94,13 @@ ul[class^="list-image-"] li::marker {
     .hc3 {
         @apply col-span-2 row-span-2 col-start-3 row-start-2 flex mb-4;
         > div {
-            @apply fill-current flex flex-1 flex-col justify-center items-center gap-4 text-left ml-4;
+            @apply fill-current flex flex-1 flex-col justify-center items-center gap-4 ml-4;
         }
     }
     .hc4 {
         @apply col-span-2 row-span-2 col-start-3 row-start-4 flex mb-4;
         > div {
-            @apply fill-current flex flex-1 flex-col justify-center items-center gap-4 text-left ml-4;
+            @apply fill-current flex flex-1 flex-col justify-center items-center gap-4 ml-4;
 
         }
     }
@@ -140,7 +140,7 @@ ul[class^="list-image-"] li::marker {
     @apply hidden;
 }
 
-.field--type-block-field {
+#block-views-block-news-block-1 {
     @apply my-12;
 }
 
@@ -190,7 +190,7 @@ ul[class^="list-image-"] li::marker {
             @apply w-full;
         }
         .views-field-description__value {
-            @apply absolute top-0 h-full w-full flex text-center place-content-evenly flex-wrap text-white bg-black/60 md:blur-[2px] md:backdrop-blur-sm hover:backdrop-blur-none hover:blur-none hover:opacity-100 transition duration-500;
+            @apply absolute top-0 h-full w-full flex text-center place-content-evenly flex-wrap text-white bg-black/60 md:bg-black/0 md:hover:bg-black/60 md:blur-sm md:hover:backdrop-blur-md hover:backdrop-blur-none hover:blur-none hover:opacity-100 transition duration-500;
             .field-content {@apply px-8}
             p {@apply text-sm leading-4 mb-2}
             a {@apply text-white}
